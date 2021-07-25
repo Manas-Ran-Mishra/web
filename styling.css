@@ -1,0 +1,25 @@
+body{
+	background-color: rgb(250,250,250);
+}
+form{
+	margin-left: 40%;
+	font-family: sans-serif;
+}
+.gt{
+	background-color: rgb(240,240,240);
+}
+input[type=text],input[type=password],input[type=email]{
+	border: 1px solid rgb(200,200,200);
+}
+input[type=submit]{
+	width: 100%;
+	cursor: pointer;
+	background-color: lightblue;
+	color: rgb(70,70,70);
+	border:none;
+}
+input[type=submit]:hover{
+	width: 110%;
+	background-color: #4CAF50;
+	color: #FFF;
+}
