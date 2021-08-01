@@ -21,5 +21,9 @@ let result;
 result = greet("BOB");
 console.log(result);
 
-console.log("Try invoking the funtion greet2() from the console lke below");
+console.log(
+  "Try invoking the funtion greet2() from the console as shown below"
+);
 console.log(">greet2('Alice')");
+console.log("Now invoke the funtion greet() from the console as shown below");
+console.log(">greet('Alice')");
