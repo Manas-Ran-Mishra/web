@@ -22,7 +22,7 @@
         color: white;
         padding: 15px 32px;
         display: inline-block;
-        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
           sans-serif;
         border-top-left-radius: 4px;
         border-top-right-radius: 4px;
@@ -40,7 +40,7 @@
         text-decoration: none;
         display: inline-block;
         font-size: 16px;
-        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
           sans-serif;
         border-top-left-radius: 4px;
         border-top-right-radius: 4px;
@@ -83,7 +83,7 @@
       #instructions {
         font-size: 20px;
         display: inline-block;
-        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
           sans-serif;
       }
       #div-greet-from-js {
@@ -114,35 +114,35 @@
       document.write(
         "<br><div id='div-greet-from-js'><p id='p-greet-from-js'>Hello World!</p></div>"
       );
-      console.log("Logs");
+      console.log('Logs');
       let counter = 1;
-      var minute = 1;
-      var clrIntervalID;
+      let minute = 1;
+      let clrIntervalID = null;
       function startCounting() {
-        if (clrIntervalID === undefined) {
+        if (clrIntervalID === null) {
           clrIntervalID = setInterval(() => {
             count();
           }, 1000);
         } else {
-          alert("Counter has started");
+          alert('Counter has started');
         }
       }
       function count() {
-        document.getElementById("count").innerHTML += counter + "...  ";
+        document.getElementById('count').innerHTML += counter + '...  ';
         console.log(counter);
         counter = counter + 1;
         if (counter === 61) {
           counter = 1;
-          document.getElementById("count").innerHTML +=
+          document.getElementById('count').innerHTML +=
             "<br /><p id='minutes'>" +
             minute +
-            " minute(s) have passed.......</p><br />";
+            ' minute(s) have passed.......</p><br />';
           minute = minute + 1;
         }
       }
       function stopCounting() {
         clearInterval(clrIntervalID);
-        clrIntervalID = undefined;
+        clrIntervalID = null;
       }
     </script>
   </body>
