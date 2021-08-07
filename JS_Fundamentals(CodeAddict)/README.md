@@ -100,4 +100,11 @@ if (str) {
 }
 ```
 
-**Ternary operators are also same as Java**
+**Ternary operators are also same as Java so they are not included.**
+
+## Global Scope, Local Scope and Variable Lookup
+
+## Read and understand the whole code as well as all comments in the .js file before making any changes to it
+
+1. **Global Scope** - A variable declared outside of code block (`{}`) that can be used anywhere in the program.
+2. **Local Scope** - A variable declared inside a code block can be used inside the that code block but can' be used outside of it.
