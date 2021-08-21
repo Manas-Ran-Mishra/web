@@ -1,25 +1,129 @@
-body{
-	background-color: rgb(250,250,250);
+body {
+  background-color: #f9a632;
 }
-form{
-	margin-left: 40%;
-	font-family: sans-serif;
+form {
+  font-family: sans-serif;
+  /* margin-left: 25%; */
+  margin-left: 25%;
+  /* margin-right: 50%; */
+  /* margin-top: 50%; */
+  /* margin-bottom: 50%; */
+  margin: 20px;
+  padding: 20px;
+
+  /* margin-left: 40%;
+  font-family: sans-serif; */
 }
-.gt{
-	background-color: rgb(240,240,240);
+.gt {
+  background-color: rgb(240, 240, 240);
 }
-input[type=text],input[type=password],input[type=email]{
-	border: 1px solid rgb(200,200,200);
+input[type='text'],
+input[type='password'],
+input[type='email'] {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  height: 25px;
+  width: auto;
+  /* background-color: gainsboro; */
+  background: #f1f3f4;
+  text-align: center;
+  color: black;
 }
-input[type=submit]{
-	width: 100%;
-	cursor: pointer;
-	background-color: lightblue;
-	color: rgb(70,70,70);
-	border:none;
+input[type='submit'] {
+  align-items: center;
+  margin: 10px;
+  width: 50%;
+  height: 40px;
+  font-size: inherit;
+  font-weight: bolder;
+  cursor: pointer;
+  background-color: #dbf3ff;
+  color: rgb(70, 70, 70);
+  border: none;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  /* transition-property: all, background-color; */
+  transition-duration: 350ms;
+  transition-timing-function: linear;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 }
-input[type=submit]:hover{
-	width: 110%;
-	background-color: #4CAF50;
-	color: #FFF;
+input[type='submit']:hover {
+  /* width: 110%; */
+  /* text-shadow: rgb(70, 70, 70); */
+  background-color: #4caf50;
+  color: #fff;
+  box-shadow: 0px 15px 20px rgba(76, 175, 80, 0.4);
+}
+
+/* .radio {
+  display: none;
+} */
+
+/* .rd {
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  border: 5px solid black;
+  padding: 2px;
+  margin: 5px;
+  display: inline-block;
+} */
+
+/* #rdbtn2 {
+} */
+
+p#float1 {
+  float: right;
+  color: red;
+}
+
+p#float2 {
+  float: right;
+  color: red;
+}
+
+/* input[type='password']:invalid {
+  border: red solid 1px;
+} */
+
+input {
+  /* background-color: transparent;
+  background: #f1f3f4; */
+  /* border: none; */
+  border: 1px solid #f1f3f4;
+  cursor: ;
+}
+
+#last-td {
+  text-align: center;
+}
+
+.form {
+  background-color: #fff;
+  border: none;
+  box-shadow: 0px 15px 15px rgb(217 112 0 / 85%);
+  width: 50%;
+  /* align-content: center; */
+  border-radius: 4.5%;
+  padding: 5%;
+  margin: auto;
+  margin-top: inherit;
+  margin-bottom: 5%;
+  margin-top: 5%;
+  padding-bottom: 1%;
+  padding-top: 1%;
+}
+
+table {
+  display: inline-block;
+  /* margin-left: 20px; */
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+input:focus {
 }

@@ -1,30 +1,98 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>HI</title>
-	<link rel="stylesheet" type="text/css" href="styling.css">
-	<script type="text/javascript" src="jspractice.js"></script>
-</head>
-<body>
-	<form>
-		<table>
-			<tr><td>Enter Name</td></tr>
-			<tr><td><input type="text" class="gt" name="name" required="required"></td></tr>
-			<tr><td>E-Mail</td></tr>
-			<tr><td><input type="email" class="gt" name="email" required="required"></td></tr>
-			<tr><td>Password</td></tr>
-			<tr><td><input class="gt" type="password" id="validate" name="password" required="required" onended="validatejsfunc()"></td></tr>
-			<tr><td>Confirm Password</td></tr>
-			<tr><td><input class="gt" type="password" id="confirm" name="cpassword" required="required" onblur ="confirmedpasswordjsfunc()"></td></tr>
-			<tr><td>Gender</td></tr>
-			<div><tr><td><input type="radio" name="choice" value="Male">Male</td></tr>
-			<tr><td><input type="radio" name="choice" value="Female">Female</td></tr></div>
+  <head>
+    <title>HI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=2.0" />
+    <link rel="stylesheet" type="text/css" href="styling.css" />
+    <script type="text/javascript" src="jspractice.js"></script>
+  </head>
+  <body>
+    <h1 id="submitted"></h1>
+    <div class="form">
+      <form onsubmit="return false">
+        <table>
+          <tr>
+            <td>Enter Name</td>
+          </tr>
+          <tr>
+            <td>
+              <input type="text" class="gt" name="name" required="required" />
+            </td>
+          </tr>
+          <tr>
+            <td>E-Mail</td>
+          </tr>
+          <tr>
+            <td>
+              <input type="email" class="gt" name="email" required="required" />
+            </td>
+          </tr>
+          <tr>
+            <td>Password</td>
+          </tr>
+          <tr>
+            <td>
+              <input
+                class="gt"
+                type="password"
+                id="validate"
+                name="password"
+                required="required"
+                pattern="[A-Z][a-z][0-9]"
+                placeholder="e.g. IND"
+                onkeyup="validatejsfunc()"
+              />
+            </td>
+            <td><p id="float1"></p></td>
+          </tr>
 
-			<tr><td><input type="submit" name="submit" onclick="newjsfunc()"></td></tr>
-		
+          <tr>
+            <td>Confirm Password</td>
+          </tr>
+          <tr>
+            <td>
+              <input
+                class="gt"
+                type="password"
+                id="confirm"
+                name="cpassword"
+                required="required"
+                pattern="[A-Z][a-z][0-9]"
+                placeholder="Confirm Password"
+                onkeyup="confirmedpasswordjsfunc()"
+              />
+            </td>
+            <td><p id="float2"></p></td>
+          </tr>
+          <tr>
+            <td>Gender</td>
+          </tr>
+          <tr>
+            <td>
+              <!-- <span class="radio"> -->
+              <input type="radio" id="rdbtn1" name="choice" value="Male" />
+              <!-- </span> -->
+              <!-- <div> -->
+              <!-- <span class="rd"></span> -->
+              <label for="rdbtn1">Male</label>
+              <!-- </div> -->
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="radio" id="rdbtn2" name="choice" value="Female" />
+              <label for="rdbtn2">Female</label>
+            </td>
+          </tr>
 
-		</table>
-	</form>
-<!--<p>HI I AM NEW TO WEB DEVELOPMENT</p>-->
-</body>
+          <tr>
+            <td id="last-td">
+              <input type="submit" name="submit" onclick="newjsfunc()" />
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+    <!--<p>HI I AM NEW TO WEB DEVELOPMENT</p>-->
+  </body>
 </html>
