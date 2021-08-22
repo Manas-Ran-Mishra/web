@@ -95,7 +95,7 @@ input {
   background: #f1f3f4; */
   /* border: none; */
   border: 1px solid #f1f3f4;
-  cursor: ;
+  cursor: auto;
 }
 
 #last-td {
@@ -125,5 +125,14 @@ table {
   margin-right: 25%;
 }
 
-input:focus {
+#rdbtn1 {
+  cursor: pointer;
 }
+
+#rdbtn2 {
+  cursor: pointer;
+}
+
+/* input:focus {
+
+} */
