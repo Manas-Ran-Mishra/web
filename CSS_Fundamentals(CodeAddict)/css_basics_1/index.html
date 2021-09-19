@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Basics</title>
+
+    <!-- Internal CSS -->
+
+    <style>
+      p {
+        color: limegreen;
+        font-size: 32px;
+      }
+    </style>
+
+    <!-- External CSS -->
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <p>
+      Try changing the <span class="code">font-size</span> of your browser and
+      observe this HTML page. Most browsers default
+      <span class="code">font-size</span> is set to
+      <span class="code">16px</span>. 😮 <br />
+      The displayed text's <span class="code">font-size</span> might change as
+      well if not explicitly overwritten in CSS.
+    </p>
+
+    <p id="link">
+      Link to
+      <a
+        href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units"
+        target="_blank"
+        rel="noopener noreferrer"
+        >MDN CSS Units and Values</a
+      >
+    </p>
+
+    <!-- Inline CSS -->
+
+    <p style="font-size: 1.5em; color: green">
+      Open Chrome 👉 Settings 👉 Appearance 👉 Font Size. 😎
+    </p>
+    <h1>Hello 1</h1>
+    <h1>Hello 2</h1>
+    <h1>Hello 3</h1>
+    <h1>Hello 4</h1>
+    <h1>Hello 5</h1>
+    <h2>Hi 1</h2>
+    <h2>Hi 2</h2>
+    <h2>Hi 3</h2>
+    <h2>Hi 4</h2>
+    <h2>Hi 5</h2>
+    <h3>Hey 1</h3>
+    <h3>Hey 2</h3>
+    <h3>Hey 3</h3>
+    <h3>Hey 4</h3>
+    <h3>Hey 5</h3>
+    <ul class="ems">
+      <li>Fruits</li>
+      <li>Veggies</li>
+      <li>
+        NonVeg
+        <ul>
+          <li>SeaFood</li>
+          <li>
+            Meat
+            <ul>
+              <li>Chicken</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <ul class="rems">
+      <li>Fruits</li>
+      <li>Veggies</li>
+      <li>
+        NonVeg
+        <ul>
+          <li>SeaFood</li>
+          <li>
+            Meat
+            <ul>
+              <li>Chicken</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </body>
+</html>

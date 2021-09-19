@@ -1,0 +1,66 @@
+/* Grouping Selectors */
+
+html,
+body {
+  /* Uncomment the below and try changing the font size, you will find something interesting */
+  /* font-size: 16px; */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Different types of units */
+/* Hello #number */
+
+h1 {
+  color: brown;
+  font-size: 2rem;
+}
+
+/* Hi #number */
+
+h2 {
+  color: chocolate;
+  font-size: 2em;
+}
+
+/* Hey #number */
+
+h3 {
+  color: tomato;
+  font-size: 150%;
+}
+
+/* difference between em and rem */
+
+.ems li {
+  font-size: 1.5em;
+  color: yellowgreen;
+  list-style-type: lower-alpha;
+}
+
+.rems li {
+  font-size: 1.5rem;
+  color: teal;
+  list-style-type: lower-alpha;
+}
+
+/* Class and ID selectors */
+.code {
+  background-color: gainsboro;
+  color: crimson;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  border-radius: 5px;
+  padding: 0px 6px;
+}
+#link {
+  color: cadetblue;
+}
+
+/* link selectors */
+/* pseudo class*/
+
+a:link,
+a:visited {
+  color: cadetblue;
+  text-decoration: underline;
+}
