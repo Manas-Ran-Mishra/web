@@ -1,5 +1,6 @@
 * {
   margin: 0;
+  box-sizing: border-box;
 }
 body {
   /* background-color: #f9a632; */
@@ -73,12 +74,13 @@ input[type='submit'] {
   border-top-right-radius: 5px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  /* transition-property: all, background-color; */
-  transition-duration: 350ms;
+  transition-property: color, background-color, box-shadow;
+  transition-duration: 250ms;
   transition-timing-function: linear;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 }
-input[type='submit']:hover {
+input[type='submit']:hover,
+input[type='submit']:focus {
   /* width: 110%; */
   /* text-shadow: rgb(70, 70, 70); */
   background-color: #4caf50;
@@ -152,14 +154,6 @@ table {
   margin-right: 25%;
 }
 
-#rdbtn1 {
-  cursor: pointer;
-}
-
-#rdbtn2 {
-  cursor: pointer;
-}
-
 .formSubmitOutput {
   background-color: rgb(35, 35, 35);
   color: #fff;
@@ -173,7 +167,7 @@ table {
   padding-right: 4rem;
   /* min-width: 100%; */
   min-height: 80vh;
-  width: calc(100vw - 8rem);
+  /* width: calc(100vw - 8rem); */
   justify-content: center;
 }
 #h1formSubmitted {
@@ -186,8 +180,10 @@ table {
   text-align: right;
   margin: 2em;
   width: 20vw;
+  height: max-content;
   padding: 1em;
   border-right: 1px solid chartreuse;
+  flex-shrink: 0;
 }
 
 #formOutput {
@@ -196,7 +192,7 @@ table {
 }
 
 /* input:focus {
-
+  
 } */
 
 .formSubmitInput {
@@ -211,3 +207,40 @@ table {
   justify-content: flex-start;
   width: calc(100vw - 20vw - 8em);
 }
+
+.radio-buttons-input {
+  display: none;
+}
+
+.radio-buttons {
+  display: flex;
+  border: none;
+  gap: 2px;
+}
+
+.radio-buttons-label {
+  display: inline-flex;
+  justify-content: center;
+  width: 100%;
+  /* border: 1px solid rgb(159, 159, 159, 0.5); */
+  background-color: #f1f3f4;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  box-sizing: border-box;
+  padding: 0.3em 0.5em;
+  transition-property: all;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+}
+/* .radio-buttons-label:hover {
+  border: 1px solid rgb(0, 0, 0);
+} */
+
+.radio-buttons-input:checked + .radio-buttons-label {
+  color: #fff;
+  background-color: cornflowerblue;
+}
+/* .radio-buttons-label:last-of-type {
+  margin-left: 15px;
+  border-right: 2px solid #85b1c7;
+} */

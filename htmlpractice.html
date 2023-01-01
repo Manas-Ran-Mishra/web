@@ -37,6 +37,7 @@
                   class="gt"
                   name="email"
                   required="required"
+                  autocomplete="username"
                 />
               </td>
             </tr>
@@ -54,6 +55,7 @@
                   pattern="[A-Z][a-z][0-9]"
                   placeholder="e.g. IND"
                   onkeyup="validatejsfunc()"
+                  autocomplete="new-password"
                 />
               </td>
               <td><p id="float1"></p></td>
@@ -72,6 +74,7 @@
                   pattern="[A-Z][a-z][0-9]"
                   placeholder="Confirm Password"
                   onkeyup="confirmedpasswordjsfunc()"
+                  autocomplete="new-password"
                 />
               </td>
               <td><p id="float2"></p></td>
@@ -81,19 +84,31 @@
             </tr>
             <tr>
               <td>
-                <!-- <span class="radio"> -->
-                <input type="radio" id="rdbtn1" name="choice" value="Male" />
-                <!-- </span> -->
-                <!-- <div> -->
-                <!-- <span class="rd"></span> -->
-                <label for="rdbtn1">Male</label>
-                <!-- </div> -->
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <input type="radio" id="rdbtn2" name="choice" value="Female" />
-                <label for="rdbtn2">Female</label>
+                <div class="radio-buttons">
+                  <!-- <span class="radio"> -->
+                  <input
+                    type="radio"
+                    id="rdbtn1"
+                    name="choice"
+                    value="Male"
+                    class="radio-buttons-input"
+                  />
+                  <!-- </span> -->
+                  <!-- <span class="rd"></span> -->
+                  <label for="rdbtn1" class="radio-buttons-label">Male</label>
+                  <!-- </td>
+                </tr>
+                <tr>
+                  <td> -->
+                  <input
+                    type="radio"
+                    id="rdbtn2"
+                    name="choice"
+                    value="Female"
+                    class="radio-buttons-input"
+                  />
+                  <label for="rdbtn2" class="radio-buttons-label">Female</label>
+                </div>
               </td>
             </tr>
             <tr>
