@@ -1,0 +1,453 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+#header {
+  height: 60px;
+  background-color: hsl(0, 0%, 10%);
+  display: flex;
+  align-items: center;
+}
+
+#footer {
+  height: 60px;
+  background-color: hsl(0, 0%, 10%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: hsl(0, 0%, 100%);
+  font-family: sans-serif;
+  font-weight: lighter;
+}
+
+#side-toggle {
+  color: hsl(0, 0%, 95%);
+  margin: 0 0.25em;
+  padding: 0.2em;
+  cursor: pointer;
+  position: fixed;
+}
+
+#side-toggle:hover,
+#side-toggle:focus {
+  color: hsl(0, 0%, 100%);
+}
+
+.navbar-bg {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  background: rgba(32, 33, 37, 0.8);
+  z-index: 2;
+  transition: all 200ms ease;
+}
+
+.navbar {
+  font-size: 1.2rem;
+  font-weight: 300;
+  font-family: sans-serif;
+  background: hsl(120, 50%, 25%);
+  background: linear-gradient(
+    180deg,
+    hsl(0, 0%, 15%),
+    hsl(0, 0%, 7.5%),
+    hsl(0, 0%, 5%)
+  );
+  position: absolute;
+  width: 200px;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: transform 200ms ease, opacity 200ms ease, z-index 0ms ease;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+}
+
+.navbar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0.1em;
+  background: white;
+  height: 100%;
+}
+
+.active {
+  opacity: 1;
+  transform: scale(1);
+  display: flex;
+}
+
+.active-bg {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.navbar #close {
+  display: block;
+  width: 50%;
+  height: 2.5em;
+  border: none;
+  background: hsla(120, 50%, 50%, 1);
+  background: hsla(0, 0%, 25%, 1);
+  font-size: 0.75em;
+  font-weight: 300;
+  font-family: inherit;
+  border-radius: 2em;
+  cursor: pointer;
+  color: hsl(0, 0%, 95%);
+  transition: background-color 150ms ease-in;
+}
+
+.navbar #close:hover,
+.navbar #close:focus {
+  background: hsl(0, 0%, 35%);
+}
+
+.navbar ul {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.navbar ul li {
+  list-style: none;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5em 0 0;
+  row-gap: 0.5em;
+  font-weight: bold;
+}
+
+.navbar ul li:not(:first-child)::after {
+  content: '';
+  width: 100%;
+  border-bottom: 1px solid hsl(0, 0%, 25%);
+  background: transparent;
+}
+
+.navbar a:link {
+  text-decoration: none;
+  color: hsl(0, 0%, 90%);
+  padding: 0.25em 0;
+  width: 100%;
+}
+.navbar a:visited {
+  text-decoration: none;
+  color: hsl(0, 0%, 90%);
+}
+.navbar a:hover {
+  text-decoration: none;
+  color: hsl(0, 0%, 90%);
+  padding: 0.25em 0;
+  width: 100%;
+}
+.navbar a:active {
+  text-decoration: none;
+  color: hsl(0, 0%, 90%);
+  padding: 0.25em 0;
+  width: 100%;
+}
+
+.layout {
+  min-height: calc(100vh - (2 * 60px));
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5em;
+  background-image: linear-gradient(
+    180deg,
+    hsl(0, 0%, 10%),
+    hsl(110, 50%, 30%),
+    hsl(0, 0%, 10%)
+  );
+}
+
+/* Below was for fun */
+
+/* .card::before {
+  opacity: 0;
+  content: 'Lorem ipsum dolor sit amet.';
+  text-align: center;
+  color: white;
+  width: calc(100% - 2em);
+  height: 50%;
+  display: flex;
+  z-index: 0;
+  position: absolute;
+  background-image: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.4) 20%,
+    rgba(0, 0, 0, 0.8)
+  );
+  bottom: 1em;
+  border-bottom-left-radius: 1.5em;
+  border-bottom-right-radius: 1.5em;
+  font-family: sans-serif;
+  font-weight: 500;
+  transition: all 250ms ease-in-out;
+  justify-content: center;
+  align-items: center;
+} */
+
+.card-container {
+  position: relative;
+  perspective: 7em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Uncomment below selector for border around the card */
+/*      -----------------------------      */
+/*     /                             \     */
+/*    |     --------------------      |    */
+/*    |    /                    \     |    */
+/*    |    |                     |    |    */
+/*    |    |                     |    |    */
+/*    |    |                     |    |    */
+/*    |    |                     |    |    */
+/*    |    |                     |    |    */
+/*    |    |                     |    |    */
+/*    |    |                     |    |    */
+/*    |    |                     |    |    */
+/*    |    |                     |    |    */
+/*    |    \                     /    |    */
+/*    |     ---------------------     |    */
+/*    \                              /     */
+/*     ------------------------------      */
+
+/* .card-container::before {
+  content: '';
+  position: absolute;
+  height: 112%;
+  width: calc(16em + 19%);
+  background: transparent;
+  top: -1.5em;
+  left: -1.5em;
+  border: 0.5em solid hsl(120, 50%, 50%);
+  border-radius: 1.5em;
+  pointer-events: none;
+} */
+/* filter: blur(0.5em); */
+/* Include below line in the above block to give Gaussian blur effect to the element */
+
+/* Uncomment below selector for border on the card */
+/*      ------------------------      */
+/*    /  ----------------------  \    */
+/*    | /                      \ |    */
+/*    | |                      | |    */
+/*    | |                      | |    */
+/*    | |                      | |    */
+/*    | |                      | |    */
+/*    | |                      | |    */
+/*    | |                      | |    */
+/*    | |                      | |    */
+/*    | |                      | |    */
+/*    | |                      | |    */
+/*    | \                      / |    */
+/*    \  ----------------------  /    */
+/*     --------------------------     */
+
+/* .card-container::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 16em;
+  background: transparent;
+  border: 0.5em solid hsla(121, 50%, 50%, 0.7);
+  border-radius: 1em;
+  pointer-events: none;
+  z-index: 1;
+} */
+/* Slighly different accent color */
+/* border: 0.5em solid hsl(115.1, 100%, 50%); */
+
+/* Uncomment below for a card shadow effect */
+/* Uncomment below selector for card border shadow effect */
+/*           -------------------------          */
+/*          /////////////|\\\\\\\\\\\\\          */
+/*         //////////////|\\\\\\\\\\\\\\         */
+/*        ///////////////|\\\\\\\\\\\\\\\        */
+/*       ////////////////|\\\\\\\\\\\\\\\\       */
+/*      /////////////////|\\\\\\\\\\\\\\\\\      */
+/*     //////////////////|\\\\\\\\\\\\\\\\\\     */
+/*    ///////////////////|\\\\\\\\\\\\\\\\\\\    */
+
+/* .card-container::after {
+  content: '';
+  width: 16em;
+  height: 2.5em;
+  background: hsl(0, 0%, 25%);
+  display: block;
+  position: absolute;
+  bottom: -4.5em;
+  filter: blur(0.25em);
+  border-radius: 10%;
+  transform: rotateX(145deg);
+} */
+
+/* Uncomment below selector for card border shadow effect */
+/*           ------------------------           */
+/*          /                        \          */
+/*         /                          \         */
+/*        /                            \        */
+/*       /                              \       */
+/*      /                                \      */
+/*     /                                  \     */
+/*    /                                    \    */
+
+/* .card-container::after {
+  content: '';
+  width: 16em;
+  height: 2.5em;
+  display: block;
+  position: absolute;
+  bottom: -4.5em;
+  filter: blur(0.25em);
+  border-radius: 3.5em;
+  border-bottom-right-radius: 3.5em;
+  border-bottom-left-radius: 3.5em;
+  transform: rotateX(140deg);
+  border: 1em solid hsl(115.1, 50%, 50%);
+  border-bottom-style: solid;
+  border-bottom-width: 0.5em;
+  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: 1em;
+} */
+/* border-bottom-color: rgba(21, 255, 0, 0.249); */
+
+.card {
+  display: flex;
+  justify-content: center;
+  width: 16em;
+  height: 25em;
+  border-radius: 1em;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  /* below also works but adds a masking layer while z-index doesn't add any additional layers */
+  /* https://stackoverflow.com/a/64885552 */
+  /* -webkit-mask-image: -webkit-radial-gradient(white, black); */
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 1em;
+  transition: transform 2000ms;
+  -moz-transition: transform 2000ms;
+}
+
+.card-text {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-image: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.45) 10%,
+    rgba(0, 0, 0, 0.9) 50%
+  );
+  text-align: center;
+  padding: 0.5em;
+  font-family: sans-serif;
+  transform: translateY(50%);
+  transition: transform 1000ms ease-in-out;
+  -moz-transition: transform 1000ms ease-in-out;
+}
+
+.card-title {
+  font-size: 1.2em;
+  padding: 1em;
+  font-weight: bold;
+}
+
+.card-title::after {
+  content: '';
+  display: block;
+  width: 100%;
+  padding: 0.5em;
+  /* height: 100%; */
+  border-bottom: 2px solid hsl(120, 50%, 50%);
+  transform: scaleX(0);
+  transition: transform 500ms ease-in-out 500ms;
+  -moz-transition: transform 500ms ease-in-out 500ms;
+}
+
+.card-summary {
+  padding: 0.5em;
+  font-weight: lighter;
+  opacity: 0;
+  transform: translateY(75%);
+  transition: transform 500ms ease-in-out 750ms, opacity 500ms ease-in-out 750ms;
+  -moz-transition: transform 500ms ease-in-out 750ms,
+    opacity 500ms ease-in-out 750ms;
+}
+
+.card:hover .card-image {
+  cursor: pointer;
+  transform: scale(1.08);
+}
+.card:focus .card-image {
+  cursor: pointer;
+  transform: scale(1.08);
+}
+
+.card:hover .card-text {
+  opacity: 1;
+  transform: translateY(0%);
+}
+.card:focus .card-text {
+  opacity: 1;
+  transform: translateY(0%);
+}
+
+.card:hover .card-title::after {
+  transform: scaleX(1);
+}
+.card:focus .card-title::after {
+  transform: scaleX(1);
+}
+
+.card:hover .card-summary {
+  opacity: 1;
+  transform: translateY(0);
+}
+.card:focus .card-summary {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 950px) {
+  .layout {
+    padding: 2em 0em;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.text {
+  font-size: 1rem;
+  text-align: center;
+  padding: 1.5rem 0rem;
+  font-family: sans-serif;
+  background-color: antiquewhite;
+}
+
+.container {
+  font-size: 1rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  min-width: 100vw;
+  background: url(./Images/Japanese-Art-1.jpeg) center/cover no-repeat;
+}
+
+p {
+  padding: 1.5em;
+  background-color: white;
+  border-radius: 0.2em;
+  background: hsl(215, 75%, 50%);
+  color: hsl(0, 100%, 100%);
+  font-weight: bolder;
+}
+
+.radio-container {
+  display: flex;
+  background: white;
+  border-radius: 0.5em;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem;
+}
+
+.radio-btn {
+  /* position: relative; */
+  display: inline-block;
+  border-radius: 10%;
+  margin: 10px;
+  background: transparent;
+  overflow: hidden;
+  transition: box-shadow 250ms ease-in-out;
+  padding: 0.5em;
+}
+
+.radio-label {
+  display: inline-flex;
+  width: 6.5rem;
+  height: 5.5rem;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #d1d1d1;
+  border-radius: 10%;
+  cursor: pointer;
+  transition: border 250ms ease-in-out, box-shadow 250ms ease-in-out;
+}
+
+.radio-input {
+  display: inline-block;
+  position: absolute;
+  opacity: 0;
+}
+
+.radio-label:hover {
+  border-color: hsla(0, 0%, 10%, 0.5);
+}
+
+.radio-btn .radio-input:checked ~ .radio-label {
+  border: 2px solid rgb(3, 91, 255);
+}
+
+.radio-btn .radio-input:focus ~ .radio-label {
+  box-shadow: 0px 0px 1px 0.25rem hsla(215, 75%, 50%, 0.566);
+}
+
+/* Uncomment #1 block to see a border scale-up effect & #2 block to see a border scale-down effect */
+/* Comment the above 2 blocks and unomment the #3 block if you are using either #1 or #2 */
+/* If you see the border is misplaced then uncomment the #4 block and insert that into #1 or #2, depending on which block you are using and uncomment the position:relative in radio-btn block */
+/* !!!! Important Note: Comment the script tag in html file */
+
+/* #1 */
+/* .radio-btn::before {
+  content: '';
+  position: absolute;
+  height: 10.7%;
+  width: 10%;
+  border-radius: 10%;
+  border: none;
+  display: block;
+  transform: scale(0.25);
+  pointer-events: none;
+  transition: transform 150ms ease-in;
+} */
+
+/* #2 */
+/* .radio-btn::before {
+  content: '';
+  position: absolute;
+  height: 10.7%;
+  width: 10%;
+  border-radius: 10%;
+  border: none;
+  display: block;
+  transform: scale(2.25);
+  pointer-events: none;
+  transition: transform 250ms ease-in-out;
+} */
+
+/* #3 */
+/* .radio-input:checked + .radio-btn::before {
+  transform: scale(1);
+  border: 2px solid cornflowerblue;
+} */
+
+/* #4 */
+/* top: 0;
+left: 0;
+height: 95.5%;
+width: 95.5%; */
+
+/* media queries */
+
+/* When width <= 500px the below CSS style will be applied */
+@media (max-width: 500px) {
+  .container {
+    min-height: 50vh;
+    background: url(./Images/Cherry-Blossoms-Japan.jpeg) center/cover no-repeat;
+  }
+  p {
+    padding: 1rem;
+  }
+  .radio-container {
+    padding: 1rem;
+  }
+}
+
+/* When width <= 350px the below CSS style will be applied */
+@media (max-width: 350px) {
+  .container {
+    padding: 1rem;
+  }
+  p {
+    padding: 0.5rem;
+  }
+  .radio-container {
+    padding: 0.5rem;
+    flex-direction: column;
+  }
+}
+
+/* When height <= 1000px AND width <= 500px the below CSS style will be applied */
+@media (max-height: 1000px) and (max-width: 500px) {
+  .container {
+    min-height: 65vh;
+  }
+}

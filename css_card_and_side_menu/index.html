@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card and Side Menu</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="navbar-bg" id="navigation-bg">
+      <nav class="navbar" id="navigation">
+        <ul>
+          <li>
+            <button id="close">Close</button>
+          </li>
+          <li><a href="https://www.google.com/">Home</a></li>
+          <li><a href="https://www.apple.com/in/">About</a></li>
+          <li><a href="https://www.youtube.com/">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <header id="header">
+      <i
+        class="fas fa-2x fa-bars"
+        id="side-toggle"
+        title="Menu"
+        tabindex="0"
+      ></i>
+    </header>
+    <div class="layout">
+      <div class="card-container">
+        <div class="card" tabindex="0">
+          <img
+            class="card-image"
+            src="./images/Nature-Japan-0.jpg"
+            alt="Nature-Japan-0"
+          />
+          <div class="card-text">
+            <p class="card-title">Lorem ipsum dolor sit amet.</p>
+            <p class="card-summary">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Incidunt, aut.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="card-container">
+        <div class="card" tabindex="0">
+          <img
+            class="card-image"
+            src="./images/Nature-Japan-1.jpeg"
+            alt="Nature-Japan-1"
+          />
+          <div class="card-text">
+            <div class="card-title">Lorem ipsum dolor sit amet.</div>
+            <div class="card-summary">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Incidunt, aut.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-container">
+        <div class="card" tabindex="0">
+          <img
+            class="card-image"
+            src="./images/Arashiyama-Bamboo-Forest.jpeg"
+            alt="Arashiyama-Bamboo-Forest"
+          />
+          <div class="card-text">
+            <div class="card-title">Lorem ipsum dolor sit amet.</div>
+            <div class="card-summary">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Incidunt, aut.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer id="footer">
+      <p><strike>&copy; 2021 Cards</strike></p>
+    </footer>
+    <script
+      src="https://kit.fontawesome.com/d0178980c2.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
